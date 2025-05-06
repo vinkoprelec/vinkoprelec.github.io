@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Product Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> <!-- For slideshow -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script> <!-- For gallery -->
+</head>
+<body>
+    <!-- Header / Slideshow -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="image1.jpg" alt="Main Image 1"></div>
+            <div class="swiper-slide"><img src="image2.jpg" alt="Main Image 2"></div>
+            <div class="swiper-slide"><img src="image3.jpg" alt="Main Image 3"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Product Portfolio Section -->
+    <section id="products">
+        <div class="product" onclick="openGallery(1)">
+            <img src="product1.jpg" alt="Product 1">
+            <p>Product 1 Description</p>
+        </div>
+        <div class="product" onclick="openGallery(2)">
+            <img src="product2.jpg" alt="Product 2">
+            <p>Product 2 Description</p>
+        </div>
+        <!-- Add more products here -->
+    </section>
+
+    <!-- Footer with Contact Info -->
+    <footer class="footer">
+        <p>Contact us at: +123 456 7890</p>
+    </footer>
+
+    <!-- Company Info Page Link -->
+    <a href="company-info.html">Company Info</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
