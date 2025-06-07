@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krovišta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="data:,">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Top Navigation Bar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="krovista.html">Krovišta</a></li>
+                <li><a href="montazne.html">Montažne kuće</a></li>
+                <li><a href="trupci.html">Kuće od trupaca</a></li>
+                <li><a href="about-us.html">O nama</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Galerija Krovišta i nadstrešnice</h1>
+
+        <div class="gallery">
+            <div class="image-container">
+                <img src="images/thumbnails/krovista/20201003_103310.jpg" alt="Image 1" class="thumbnail" onclick="openGallery(0, 'krovista')">
+            </div>
+            <div class="image-container">
+                <img src="images/thumbnails/krovista/20210708_125721.jpg" alt="Image 2" class="thumbnail" onclick="openGallery(1, 'krovista')">
+            </div>
+            <div class="image-container">
+                <img src="images/thumbnails/krovista/20220428_163840.jpg" alt="Image 3" class="thumbnail" onclick="openGallery(2, 'krovista')">
+            </div>
+            <div class="image-container">
+                <img src="images/thumbnails/krovista/20220512_110517.jpg" alt="Image 4" class="thumbnail" onclick="openGallery(3, 'krovista')">
+            </div>
+            <div class="image-container">
+                <img src="images/thumbnails/krovista/20220512_110853.jpg" alt="Image 5" class="thumbnail" onclick="openGallery(4, 'krovista')">
+            </div>
+            <div class="image-container">
+                <img src="images/thumbnails/krovista/20220513_154820.jpg" alt="Image 6" class="thumbnail" onclick="openGallery(5, 'krovista')">
+            </div>
+            <div class="image-container">
+                <img src="images/thumbnails/krovista/20220513_154841.jpg" alt="Image 7" class="thumbnail" onclick="openGallery(6, 'krovista')">
+            </div>
+            <div class="image-container">
+                <img src="images/thumbnails/krovista/20230704_100007.jpg" alt="Image 8" class="thumbnail" onclick="openGallery(7, 'krovista')">
+            </div>
+            <div class="image-container">
+                <img src="images/thumbnails/krovista/20230720_121749.jpg" alt="Image 9" class="thumbnail" onclick="openGallery(8, 'krovista')">
+            </div>
+            <div class="image-container">
+                <img src="images/thumbnails/krovista/20241213_153703.jpg" alt="Image 10" class="thumbnail" onclick="openGallery(9, 'krovista')">
+            </div>
+        </div>
+        <!-- Fullscreen Gallery Modal -->
+        <div id="gallery-modal" class="modal">
+            <span class="close" onclick="closeGallery()">&times;</span>
+            <div class="modal-content">
+                <!-- Image in modal -->
+                <img id="modal-image" src="" alt="Fullscreen Image">
+                <!-- Navigation buttons -->
+                <div class="modal-navigation">
+                    <button class="prev" onclick="changeImage(-1, 'krovista')">&#10094;</button>
+                    <button class="next" onclick="changeImage(1,  'krovista')">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Kontakt: +385 92 3768 286</p>
+    </footer>
+</body>
+</html>

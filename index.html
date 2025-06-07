@@ -3,44 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Product Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> <!-- For slideshow -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script> <!-- For gallery -->
+    <title>Drvo Art Kuće</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="data:,">
 </head>
 <body>
-    <!-- Header / Slideshow -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="image1.jpg" alt="Main Image 1"></div>
-            <div class="swiper-slide"><img src="image2.jpg" alt="Main Image 2"></div>
-            <div class="swiper-slide"><img src="image3.jpg" alt="Main Image 3"></div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
+    <header>
+        <!-- Top Navigation Bar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="krovista.html">Krovišta</a></li>
+                <li><a href="montazne.html">Montažne kuće</a></li>
+                <li><a href="trupci.html">Kuće od trupaca</a></li>
+                <li><a href="about-us.html">O nama</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- First slide with video -->
+                <div class="swiper-slide">
+                    <video class="video-slide" autoplay muted playsinline>
+                        <source src="videos/webVideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Subsequent image slides -->
+                <div class="swiper-slide"><img src="images/image2.jpg" alt="Product 2"></div>
+                <div class="swiper-slide"><img src="images/image3.jpg" alt="Product 3"></div>
+            </div>
 
-    <!-- Product Portfolio Section -->
-    <section id="products">
-        <div class="product" onclick="openGallery(1)">
-            <img src="product1.jpg" alt="Product 1">
-            <p>Product 1 Description</p>
+            <!-- Next and Previous Buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Pagination Dots -->
+            <div class="swiper-pagination"></div>
         </div>
-        <div class="product" onclick="openGallery(2)">
-            <img src="product2.jpg" alt="Product 2">
-            <p>Product 2 Description</p>
-        </div>
-        <!-- Add more products here -->
-    </section>
+
+        <!-- Product Portfolio Section -->
+        <section id="products">
+            <div class="product" onclick="window.location.href='krovista.html';">
+                <div class="product-image-container">
+                    <img src="images/kroviste.jpg" alt="Kuća 1">
+                    <p>Krovišta i nadstrešnice</p>
+                </div>
+            </div>
+            <div class="product" onclick="window.location.href='montazne.html';">
+                <div class="product-image-container">
+                    <img src="images/montage.jpg" alt="Kuća 3">
+                    <p>Montažne kuće</p>
+                </div>
+            </div>
+            <div class="product" onclick="window.location.href='trupci.html';">
+                <div class="product-image-container">
+                    <img src="images/trupci.jpg" alt="Kuća 2">
+                    <p>Kuće od trupaca</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer with Contact Info -->
     <footer class="footer">
-        <p>Contact us at: +123 456 7890</p>
+        <p>Kontakt: +385 92 3768 286</p>
     </footer>
 
-    <!-- Company Info Page Link -->
-    <a href="company-info.html">Company Info</a>
+    <!-- Swiper JS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
 </body>
