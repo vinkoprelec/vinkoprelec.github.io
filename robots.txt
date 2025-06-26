@@ -1,0 +1,3 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://drvoartkuce.hr/sitemap.xml
