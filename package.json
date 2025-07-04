@@ -1,0 +1,28 @@
+{
+  "name": "drvoart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "compress-images.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinkoprelec/DrvoArt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinkoprelec/DrvoArt/issues"
+  },
+  "homepage": "https://github.com/vinkoprelec/DrvoArt#readme",
+  "devDependencies": {
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^5.0.1",
+    "imagemin-webp": "^8.0.0"
+  },
+  "dependencies": {
+    "imagemin": "^9.0.1"
+  }
+}

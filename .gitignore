@@ -1,0 +1,15 @@
+# Dependency folders
+node_modules/
+
+# Output folders
+dist/
+build/
+*.log
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Ignore binary and temp stuff
+*.bin
