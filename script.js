@@ -133,7 +133,9 @@ const ravnaGoraImages = [
     "/images/TrupciKuce/ravnaGora/IMG-20210215-WA0016.jpg"
 ];
 
-// Open gallery modal and display the high-res image
+let currentImageIndex = 0;
+let currentImageSet = "";
+
 function openGallery(index, caller) {
     currentImageIndex = index;
     images = caller;
