@@ -138,7 +138,7 @@ let currentImageSet = "";
 
 function openGallery(index, caller) {
     currentImageIndex = index;
-    images = caller;
+    currentImageSet = caller;
     updateGalleryImage();
     document.getElementById("gallery-modal").style.display = "block";
 }
@@ -164,6 +164,7 @@ function changeImage(direction) {
 
 function updateGalleryImage() {
     const imageArray = getImageSet(currentImageSet);
+    if (!imageArray.length) return;
     document.getElementById("modal-image").src = imageArray[currentImageIndex];
 }
 
