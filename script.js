@@ -137,66 +137,42 @@ const ravnaGoraImages = [
 function openGallery(index, caller) {
     currentImageIndex = index;
     images = caller;
-    let highResImage = "";
-    if (images == "krovista") {
-        highResImage = krovista[currentImageIndex];
-    } else if (images == "bistraImages") {
-        highResImage = bistraImages[currentImageIndex];
-    } else if (images == "fuzineImages") {
-        highResImage = fuzineImages[currentImageIndex];
-    } else if (images == "ravnaGoraImages") {
-        highResImage = ravnaGoraImages[currentImageIndex];
-    } else if (images == "breznickiHumImages") {
-        highResImage = breznickiHumImages[currentImageIndex];
-    } else if (images == "montazne") {
-        highResImage = montazne[currentImageIndex];
-    }
-    document.getElementById("modal-image").src = highResImage;
+    updateGalleryImage();
     document.getElementById("gallery-modal").style.display = "block";
 }
 
-// Close the gallery modal
 function closeGallery() {
     document.getElementById("gallery-modal").style.display = "none";
-    document.getElementById("gallery-modal").highResImage = "";
+    currentImageIndex = 0;
+    currentImageSet = "";
 }
 
-function changeImage(direction, caller) {
+function changeImage(direction) {
     currentImageIndex += direction;
-    let length;
+    const length = getImageSet(currentImageSet).length;
 
-    if (caller == "krovista") {
-        length = krovista.length;
-    } else if (caller == "bistraImages") {
-        length = bistraImages.length;
-    } else if (caller == "fuzineImages") {
-        length = fuzineImages.length;
-    } else if (caller == "ravnaGoraImages") {
-        length = ravnaGoraImages.length;
-    } else if (caller == "breznickiHumImages") {
-        length = breznickiHumImages.length;
-    } else if (caller == "montazne") {
-        length = montazne.length;
-    }
-
-    // Loop back to the beginning or end
     if (currentImageIndex < 0) {
         currentImageIndex = length - 1;
     } else if (currentImageIndex >= length) {
         currentImageIndex = 0;
     }
 
-    if (caller == "krovista") {
-        document.getElementById("modal-image").src = krovista[currentImageIndex];
-    } else if (caller == "bistraImages") {
-        document.getElementById("modal-image").src = bistraImages[currentImageIndex];
-    } else if (caller == "fuzineImages") {
-        document.getElementById("modal-image").src = fuzineImages[currentImageIndex];
-    } else if (caller == "ravnaGoraImages") {
-        document.getElementById("modal-image").src = ravnaGoraImages[currentImageIndex];
-    } else if (caller == "breznickiHumImages") {
-        document.getElementById("modal-image").src = breznickiHumImages[currentImageIndex];
-    } else if (caller == "montazne") {
-        document.getElementById("modal-image").src = montazne[currentImageIndex];
+    updateGalleryImage();
+}
+
+function updateGalleryImage() {
+    const imageArray = getImageSet(currentImageSet);
+    document.getElementById("modal-image").src = imageArray[currentImageIndex];
+}
+
+function getImageSet(name) {
+    switch (name) {
+        case "krovista": return krovista;
+        case "bistraImages": return bistraImages;
+        case "fuzineImages": return fuzineImages;
+        case "ravnaGoraImages": return ravnaGoraImages;
+        case "breznickiHumImages": return breznickiHumImages;
+        case "montazne": return montazne;
+        default: return [];
     }
 }
