@@ -10,15 +10,18 @@
 </head>
 <body>
     <header>
-        <!-- Top Navigation Bar -->
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">
+                <a href="/index.html">
                     <img src="/images/logo.webp" alt="Drvo Art Kuće" />
                 </a>
             </div>
 
-            <div class="nav-wrapper">
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="nav-wrapper" id="nav-menu">
                 <ul>
                     <li><a href="/index.html"><i class="fa-solid fa-house"></i></a></li>
                     <li><a href="/krovista.html">Krovišta</a></li>
@@ -28,6 +31,7 @@
                 </ul>
             </div>
         </nav>
+
     </header>
 
     <section id="about-us">
@@ -40,5 +44,7 @@
     <footer class="footer">
         <p>Možete nas kontaktirati putem telefona: +385 92 3768 286 ili na email: info@drvoartkuce.hr</p>
     </footer>
+    <script src="/script.js"></script>
+
 </body>
 </html>

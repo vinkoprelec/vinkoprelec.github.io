@@ -420,3 +420,53 @@ button {
             }
 }
 
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        height: auto;
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-wrapper {
+        width: 100%;
+        display: none;
+    }
+
+        .nav-wrapper.show {
+            display: block;
+        }
+
+        .nav-wrapper ul {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+            .nav-wrapper ul li {
+                margin: 0;
+                width: 100%;
+            }
+
+                .nav-wrapper ul li a {
+                    display: block;
+                    width: 100%;
+                    padding: 10px 0;
+                }
+}
+
+

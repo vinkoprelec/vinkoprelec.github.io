@@ -179,3 +179,8 @@ function getImageSet(name) {
         default: return [];
     }
 }
+
+function toggleMenu() {
+    const menu = document.getElementById("nav-menu");
+    menu.classList.toggle("show");
+}
