@@ -44,7 +44,6 @@ const krovista = [
     "/images/Krovista/20220512_110517.jpg",
     "/images/Krovista/20220512_110853.jpg",
     "/images/Krovista/20220513_154820.jpg",
-    "/images/Krovista/20220513_154841.jpg",
     "/images/Krovista/20230704_100007.jpg",
     "/images/Krovista/20230720_121749.jpg",
     "/images/Krovista/20241016_161133.jpg",
