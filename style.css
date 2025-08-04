@@ -162,11 +162,18 @@ main {
     padding: 20px;
 }
 
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+    #houses {
+        grid-template-columns: 1fr;
+    }
+}
+
 .house-image-container {
     position: relative;
     overflow: hidden;
     border-radius: 8px; /* Optional: add rounded corners */
-    height: 250px; /* Fixed height for each image */
+    height: 200px; /* Fixed height for each image */
     width: 100%; /* Make sure it takes up the full width of the column */
 }
 
@@ -189,16 +196,13 @@ main {
         left: 50%;
         transform: translateX(-50%);
         color: white;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    #houses {
-        grid-template-columns: 1fr; /* Stack the images in one column for smaller screens */
-    }
+.house {
+    cursor: pointer;
 }
 
 /* Product Portfolio Section */
@@ -467,6 +471,33 @@ button {
                     width: 100%;
                     padding: 10px 0;
                 }
+}
+
+.overlay-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.house-image-container:hover .overlay-link {
+    opacity: 1;
+}
+
+/* On mobile, always show the link */
+@media (max-width: 768px) {
+    .overlay-link {
+        opacity: 1;
+    }
 }
 
 
